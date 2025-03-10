@@ -1,0 +1,644 @@
+{
+	"info": {
+		"_postman_id": "eac1a03c-df6c-41c5-94ab-d257066010a5",
+		"name": "assessment-sofka",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17373384"
+	},
+	"item": [
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "create Customer-1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"origin\": \"Postman\",\r\n    \"userRequest\": \"rchamba\",\r\n    \"ipRequest\": \"198.111.100.12\",\r\n    \"payload\": {\r\n        \"fullName\": \"Jose Lema\",\r\n        \"gender\": \"M\",\r\n        \"age\": 20,\r\n        \"identification\": \"172377412\",\r\n        \"address\": \"Otavalo sn y principal\",\r\n        \"phone\": \"098254785\",\r\n        \"password\": \"1234\",\r\n        \"status\": \"true\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/apisofka/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"apisofka",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Customer-2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"origin\": \"Postman\",\r\n    \"userRequest\": \"rchamba\",\r\n    \"ipRequest\": \"198.111.100.12\",\r\n    \"payload\": {\r\n        \"fullName\": \"Marianela Montalvo\",\r\n        \"gender\": \"F\",\r\n        \"age\": 18,\r\n        \"identification\": \"172434345\",\r\n        \"address\": \"Amazonas y NNUU\",\r\n        \"phone\": \"097548965\",\r\n        \"password\": \"5678\",\r\n        \"status\": \"true\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/apisofka/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"apisofka",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Customer-3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"origin\": \"Postman\",\r\n    \"userRequest\": \"rchamba\",\r\n    \"ipRequest\": \"198.111.100.12\",\r\n    \"payload\": {\r\n        \"fullName\": \"Juan Osorio\",\r\n        \"gender\": \"M\",\r\n        \"age\": 23,\r\n        \"identification\": \"232434345\",\r\n        \"address\": \"13 junio y Equinoccial\",\r\n        \"phone\": \"098874587\",\r\n        \"password\": \"1245\",\r\n        \"status\": \"true\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/apisofka/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"apisofka",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Customer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"origin\": \"Postman\",\r\n    \"userRequest\": \"rchamba\",\r\n    \"ipRequest\": \"198.111.100.12\",\r\n    \"payload\": {\r\n        \"fullName\": \"Jpse Lema 2\",\r\n        \"gender\": \"M\",\r\n        \"age\": 30,\r\n        \"address\": \"Otavalo update\",\r\n        \"phone\": \"098254700\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/apisofka/clientes/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"apisofka",
+								"clientes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/apisofka/clientes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"apisofka",
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list Customers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/apisofka/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"apisofka",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "retrive Customer",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/apisofka/clientes/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"apisofka",
+								"clientes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "account",
+			"item": [
+				{
+					"name": "create Account-1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"origin\": \"Postman\",\r\n    \"userRequest\": \"rchamba\",\r\n    \"ipRequest\": \"198.111.100.12\",\r\n    \"payload\": {\r\n        \"number\": \"478758\",\r\n        \"type\": \"Ahorros\",\r\n        \"balance\": 2000,\r\n        \"customerId\": \"1\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/apitransaction/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"apitransaction",
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Account-2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"origin\": \"Postman\",\r\n    \"userRequest\": \"rchamba\",\r\n    \"ipRequest\": \"198.111.100.12\",\r\n    \"payload\": {\r\n        \"number\": \"225487\",\r\n        \"type\": \"Corriente\",\r\n        \"balance\": 100,\r\n        \"customerId\": \"2\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/apitransaction/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"apitransaction",
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Account-3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"origin\": \"Postman\",\r\n    \"userRequest\": \"rchamba\",\r\n    \"ipRequest\": \"198.111.100.12\",\r\n    \"payload\": {\r\n        \"number\": \"495878\",\r\n        \"type\": \"Ahorros\",\r\n        \"balance\": 0,\r\n        \"customerId\": \"3\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/apitransaction/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"apitransaction",
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Account-4",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"origin\": \"Postman\",\r\n    \"userRequest\": \"rchamba\",\r\n    \"ipRequest\": \"198.111.100.12\",\r\n    \"payload\": {\r\n        \"number\": \"496825\",\r\n        \"type\": \"Ahorros\",\r\n        \"balance\": 540,\r\n        \"customerId\": \"2\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/apitransaction/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"apitransaction",
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Account-5",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"origin\": \"Postman\",\r\n    \"userRequest\": \"rchamba\",\r\n    \"ipRequest\": \"198.111.100.12\",\r\n    \"payload\": {\r\n        \"number\": \"585545\",\r\n        \"type\": \"Corriente\",\r\n        \"balance\": 1000,\r\n        \"customerId\": \"1\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/apitransaction/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"apitransaction",
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list Account",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/apitransaction/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"apitransaction",
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Account",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userRequest\": \"rchamba\",\r\n    \"ipRequest\": \"198.100.12.00\",\r\n    \"origin\": \"Postam\",\r\n    \"payload\": {\r\n        \"type\": \"Ahorros\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/apitransaction/cuentas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"apitransaction",
+								"cuentas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Account",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/apitransaction/cuentas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"apitransaction",
+								"cuentas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transaction",
+			"item": [
+				{
+					"name": "withdraw value-1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userRequest\": \"rchamba\",\r\n    \"ipRequest\": \"198.100.99.0\",\r\n    \"origin\": \"Postamn\",\r\n    \"payload\": {\r\n        \"accountNumber\": \"478758\",\r\n        \"value\": 575,\r\n        \"movementType\": \"WITHDRAW\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/apitransaction/movimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"apitransaction",
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deposit value-1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userRequest\": \"rchamba\",\r\n    \"ipRequest\": \"198.100.99.0\",\r\n    \"origin\": \"Postamn\",\r\n    \"payload\": {\r\n        \"accountNumber\": \"225487\",\r\n        \"value\": 600,\r\n        \"movementType\": \"DEPOSIT\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/apitransaction/movimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"apitransaction",
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deposit value-2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userRequest\": \"rchamba\",\r\n    \"ipRequest\": \"198.100.99.0\",\r\n    \"origin\": \"Postamn\",\r\n    \"payload\": {\r\n        \"accountNumber\": \"495878\",\r\n        \"value\": 150,\r\n        \"movementType\": \"DEPOSIT\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/apitransaction/movimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"apitransaction",
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "withdraw value-2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userRequest\": \"rchamba\",\r\n    \"ipRequest\": \"198.100.99.0\",\r\n    \"origin\": \"Postamn\",\r\n    \"payload\": {\r\n        \"accountNumber\": \"496825\",\r\n        \"value\": 540,\r\n        \"movementType\": \"WITHDRAW\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/apitransaction/movimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"apitransaction",
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "report",
+			"item": [
+				{
+					"name": "generateReport",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/apitransaction/reportes?cliente=2&dateFrom=2025-01-01&dateTo=2025-09-27",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"apitransaction",
+								"reportes"
+							],
+							"query": [
+								{
+									"key": "cliente",
+									"value": "2",
+									"description": "ide del cliente"
+								},
+								{
+									"key": "dateFrom",
+									"value": "2025-01-01",
+									"description": "rango fecha inicio de los movimientos"
+								},
+								{
+									"key": "dateTo",
+									"value": "2025-09-27",
+									"description": "rango fecha fin de los movimientos"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

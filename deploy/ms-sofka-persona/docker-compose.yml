@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+
+  ms-sofka-persona:
+    image: ms-sofka-persona:latest
+    container_name:  ms-sofka-persona
+    ports:
+      - "8083:8080"
+    volumes:
+      - ./application.properties:/app/application.properties
+    networks:
+      -  shared-network
+networks:
+   shared-network:
+    external: true

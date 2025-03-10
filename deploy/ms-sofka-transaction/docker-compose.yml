@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+
+  ms-sofka-transaction:
+    image: ms-sofka-transaction:latest
+    container_name:  ms-sofka-transaction
+    ports:
+      - "8084:8080"
+    volumes:
+      - ./application.properties:/app/application.properties
+    networks:
+      -  shared-network
+networks:
+   shared-network:
+    external: true
