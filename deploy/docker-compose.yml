@@ -1,0 +1,42 @@
+version: '3.7'
+
+services:
+
+  mysql-sofka:
+    image: mysql:latest
+    container_name: mysql-sofka
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: sofka
+      MYSQL_DATABASE: db_assessment_sofka
+    ports:
+      - "3307:3306"
+    networks:
+      - shared-network
+
+  ms-sofka-persona:
+    image: ms-sofka-persona:latest
+    container_name:  ms-sofka-persona
+    ports:
+      - "8083:8080"
+    volumes:
+      - ./ms-sofka-persona/application.properties:/app/application.properties
+    depends_on:
+      -  mysql-sofka
+    networks:
+      -  shared-network
+
+  ms-sofka-transaction:
+    image: ms-sofka-transaction:latest
+    container_name:  ms-sofka-transaction
+    ports:
+      - "8084:8080"
+    volumes:
+      - ./ms-sofka-transaction/application.properties:/app/application.properties
+    depends_on:
+      -  mysql-sofka
+    networks:
+      -  shared-network
+networks:
+   shared-network:
+    external: true

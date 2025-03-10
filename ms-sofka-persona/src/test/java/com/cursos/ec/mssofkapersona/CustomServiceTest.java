@@ -42,7 +42,7 @@ class CustomServiceTest {
     @DisplayName("Test to check if a customer is saved successfully")
     @Test
     void testSaveCustomer() {
-        when(customerRepo.existsByIdentification(DataMock.customerReqDTO.getIdentification())).thenReturn(false);
+        when(customerRepo.existsByIdentificationAndStatusRecord(DataMock.customerReqDTO.getIdentification(), "Activo")).thenReturn(false);
         when(customerRepo.save(any(Customer.class))).thenReturn(DataMock.customer);
         try {
 
@@ -63,7 +63,7 @@ class CustomServiceTest {
     @Test
     void testExistCustomer() {
 
-        when(customerRepo.existsByIdentification(DataMock.customerReqDTO.getIdentification())).thenReturn(true);
+        when(customerRepo.existsByIdentificationAndStatusRecord(DataMock.customerReqDTO.getIdentification(), "Activo")).thenReturn(true);
 
         var duplicateException = assertThrows(DuplicateResourceException.class, () -> customerService.saveCustomer(GenericReqDTO.<CustomerReqDTO>
                         builder()
@@ -93,7 +93,7 @@ class CustomServiceTest {
     @Test
     void testFindById_success() throws GenericException {
 
-        when(customerRepo.findById(DataMock.customer.getPersonId())).thenReturn(Optional.of(DataMock.customer));
+        when(customerRepo.findByPersonIdAndStatusRecord(DataMock.customer.getPersonId(), "Activo")).thenReturn(Optional.of(DataMock.customer));
 
         var response = customerService.findById(DataMock.customer.getPersonId());
 
@@ -107,7 +107,7 @@ class CustomServiceTest {
     @Test
     void testFindById_customerNotFound() {
 
-        when(customerRepo.findById(DataMock.customer.getPersonId())).thenReturn(Optional.empty());
+        when(customerRepo.findByPersonIdAndStatusRecord(DataMock.customer.getPersonId(), "Activo")).thenReturn(Optional.empty());
 
         var exception = assertThrows(NotFoundException.class, () -> {
             customerService.findById(DataMock.customer.getPersonId());
